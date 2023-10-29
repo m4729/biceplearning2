@@ -37,4 +37,13 @@ module appService 'modules/appService.bicep' = {
   }
 }
 
+resource storageaccount 'Microsoft.Storage/storageAccounts@2023-01-01' = {
+  name: 'uniqqnamesgag'
+  location: location
+  sku: {
+    name: 'Standard_LRS'
+  }
+  kind: 'StorageV2'
+}
+
 output appServiceAppHostName string = appService.outputs.appServiceAppHostName
