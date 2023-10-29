@@ -46,4 +46,13 @@ resource storageaccount 'Microsoft.Storage/storageAccounts@2023-01-01' = {
   kind: 'StorageV2'
 }
 
+resource storageaccount2 'Microsoft.Storage/storageAccounts@2023-01-01' = {
+  name: 'uniqqnamesgag2'
+  location: location
+  sku: {
+    name: 'Standard_LRS'
+  }
+  kind: 'StorageV2'
+}
+
 output appServiceAppHostName string = appService.outputs.appServiceAppHostName
